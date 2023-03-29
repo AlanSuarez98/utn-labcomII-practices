@@ -1,0 +1,101 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul li{
+    font-weight: bold;
+}
+ol li{
+    font-weight: bold;
+}
+#netflix:hover{
+    color: brown;
+    transition: 0.2s ease all;
+}
+#youtube:hover{
+    color: red;
+    transition: 0.2s ease all;
+}
+#steam:hover{
+    color: steelblue;
+    transition: 0.2s ease all;
+}
+#spotify:hover{
+    color: green;
+    transition: 0.2s ease all;
+}
+#starplus:hover{
+    color: midnightblue;
+    transition: 0.2s ease all;
+}
+#github:hover{
+    color: slategray;
+    transition: 0.2s ease all;
+}
+.imagenes{
+    width: 33%; 
+    filter: brightness(25%);
+}
+.imagenes:hover{
+    filter: none;
+    transition: 0.2s ease all;
+}
+.linea{
+    color: darkcyan;
+}
+.boton{
+    background-color: red;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 6px;
+    box-shadow: 1px 2px 2px black;
+    cursor: pointer;
+    opacity: 50%;
+}
+.boton:hover{
+    opacity: 100%;
+    transition: 0.2s ease all;
+}
+.boton.active{
+    opacity: 0%;
+}
+.boton2{
+    background-color: transparent;
+    border-left: 2px solid rgb(5, 85, 233);
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+    border-right: 2px solid rgb(5, 85, 233);
+    padding: 10px;
+    margin: 15px;
+    border-radius: 6px;
+    box-shadow: 1px 2px 2px black;
+    cursor: pointer;
+    position: absolute;
+    left: 500px;
+    font-size: 40px;
+    color: white;
+    opacity: 0;
+}
+.boton2:hover{
+    opacity: 1;
+    transition: 0.2s ease all;
+}
+.caja{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    visibility: hidden;
+}
+.caja.active{
+    visibility: visible;
+}
+.messi{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
