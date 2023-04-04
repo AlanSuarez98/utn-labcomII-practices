@@ -27,6 +27,13 @@
         input,select{
             text-align: center;
         }
+        #gustos{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5px;
+        }
         
     </style>
 </head>
@@ -59,17 +66,19 @@
             <option value="Trabajo part time">Trabajo part time</option>
             <option value="Trabajo full time">Trabajo full time</option>
         </select>
+        <fieldset id="gustos">
+            <label for="gustosPersonales"><strong>Gustos Personales</strong></label>
+            <label for="musica">Gustos Músicales:</label>
+            <input type="text" name="musica" id="musica">
+            <label for="comida">Comidas Preferidas:</label>
+            <select name="comida" id="comida">
+                <option value="pastas">Pastas</option>
+                <option value="pizza">Pizza Muzzarela</option>
+                <option value="milafritas">Milanesa con Fritas</option>
+                <option value="Asado" id="asado">Asado</option>
+            </select>
 
-        <label for="gustosPersonales"><strong>Gustos Personales</strong></label>
-        <label for="musica">Gustos Músicales:</label>
-        <input type="text" name="musica" id="musica">
-        <label for="comida">Comidas Preferidas:</label>
-        <select name="comida" id="comida">
-            <option value="pastas">Pastas</option>
-            <option value="pizza">Pizza Muzzarela</option>
-            <option value="milafritas">Milanesa con Fritas</option>
-            <option value="Asado" id="asado">Asado</option>
-        </select>
+        </fieldset>
         <label for="recordarme">Recordar mis datos</label>
         <input type="checkbox" name="Recordar" id="recordarme">
         <input type="button" value="ENVIAR">
