@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header>
+        <h1>Hola mundo!</h1>
+    </header>
+    <div class="container">
+        <!-- Navegación / cotenedor izquierdo -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="multimedia.html">Multimedia</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <!-- Contenedor principal -->
+        <main>
+            <!--Section Formulario-->
+            <section>
+                <form action="POST">
+                    <!--Tablas con formulario-->
+                    <table>
+                        <!--Fila 1-->
+                        <tr>
+                            <td><label for="nombre">Nombre:<span>*</span></label></td>
+                            <td><input type="text" name="nombre" id="nombre" required></td>
+                        </tr>
+                        <!--Fin fila 1-->
+
+                        <!--Fila 2-->
+                        <tr>
+                            <td><label for="email">Email:<span>*</span></label></td>
+                            <td><input type="email" name="email" id="email" required></td>
+                        </tr>
+                        <!--Fin fila 2-->
+
+                        <!--Fila 3-->
+                        <tr>
+                            <td><label for="edad">Edad:</label></td>
+                            <td><input type="number" name="edad" id="edad"></td>
+                        </tr>
+                        <!--Fin fila 3-->
+
+                        <!--Fila 4-->
+                        <tr>
+                            <td><label for="color">Color preferido:</label></td>
+                            <td><input type="text" name="color" id="color"></td>
+
+                        </tr>
+                        <!--Fin fila 4-->
+
+                        <!--Fila 5-->
+                        <tr>
+                            <td><label for="comentarios">Comentarios:</label></td>
+                            <td><textarea name="comentarios" id="comentarios" cols="21" rows="10" minlength="10"></textarea>
+                            </td>
+                        </tr>
+                        <!--Fin fila 5-->
+
+                        <!--Fila 6-->
+                        <tr>
+                            <td colspan="2"><button type="submit">ENVIAR</button></td>
+                        </tr>
+
+                    </table>
+                    <!--Fin tabla-->
+                </form>
+            </section>
+            <!--Fin section formulario-->
+
+            <!--Section ubicacion-->
+            <section>
+                <!--Mapa ubicacion-->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13390.824394550891!2d-60.646270042993166!3d-32.95876811363491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ab11d0eb49c3%3A0x11f1d3d54f950dd0!2sUniversidad%20Tecnol%C3%B3gica%20Nacional%20%7C%20Facultad%20Regional%20Rosario!5e0!3m2!1ses!2sar!4v1680634369106!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <!--Fin mapa ubicacion-->
+            </section>
+        </main>
+        <!-- Contenedor secundario / derecho -->
+        <div class="right">
+            <h2>Info</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+        </div>
+    </div>
+    <!-- Pie de Página-->
+    <footer>
+        <p>© copyright labcomII.com</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header>
+        <h1>Hola mundo!</h1>
+    </header>
+    <div class="container">
+        <!-- Navegación / cotenedor izquierdo -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="multimedia.html">Multimedia</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <!-- Contenedor principal -->
+        <main>
+            <form action="POST">
+                <!--Tablas con formulario-->
+                <table>
+                    <!--Fila 1-->
+                    <tr>
+                        <td><label for="nombre">Nombre:<span>*</span></label></td>
+                        <td><input type="text" name="nombre" id="nombre" required></td>
+                    </tr>
+                    <!--Fin fila 1-->
+
+                    <!--Fila 2-->
+                    <tr>
+                        <td><label for="email">Email:<span>*</span></label></td>
+                        <td><input type="email" name="email" id="email" required></td>
+                    </tr>
+                    <!--Fin fila 2-->
+
+                    <!--Fila 3-->
+                    <tr>
+                        <td><label for="edad">Edad:</label></td>
+                        <td><input type="number" name="edad" id="edad"></td>
+                    </tr>
+                    <!--Fin fila 3-->
+
+                    <!--Fila 4-->
+                    <tr>
+                        <td><label for="color">Color preferido:</label></td>
+                        <td><input type="text" name="color" id="color"></td>
+
+                    </tr>
+                    <!--Fin fila 4-->
+
+                    <!--Fila 5-->
+                    <tr>
+                        <td><label for="comentarios">Comentarios:</label></td>
+                        <td><textarea name="comentarios" id="comentarios" cols="21" rows="10" minlength="10"></textarea>
+                        </td>
+                    </tr>
+                    <!--Fin fila 5-->
+
+                    <!--Fila 6-->
+                    <tr>
+                        <td colspan="2"><button type="submit">ENVIAR</button></td>
+                    </tr>
+
+                </table>
+                <!--Fin tabla-->
+            </form>
+        </main>
+        <!-- Contenedor secundario / derecho -->
+        <div class="right">
+            <h2>Info</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+        </div>
+    </div>
+    <!-- Pie de Página-->
+    <footer>
+        <p>© copyright labcomII.com</p>
+    </footer>
+</body>
+
+</html>
