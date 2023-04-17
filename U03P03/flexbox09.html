@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Columnas con filas </title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            padding: 20px;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .izquierda {
+            flex: 2;
+            padding: 12px;
+            background: rgba(14, 124, 116, 1.00);
+            color: white;
+        }
+
+        .derecha {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .fila {
+            flex: 1 1 100%;
+            border: 1px solid lightgray;
+            padding: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="izquierda">Columna izquierda</div>
+    <div class="derecha">
+        <div class="fila">Derecha parte alta</div>
+        <div class="fila">Derecha parte baja</div>
+    </div>
+</body>
+
+</html>
