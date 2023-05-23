@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre">
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido" id="apellido">
+
+        <input type="button" value="Guardar Datos" onclick="guardarDatos();">
+        <p id="datos">Pulsa para ver tus datos</p>
+        <input type="button" value="Recuperar Datos" onclick="recuperarDatos();">
+    </form>
+
+</body>
+<script>
+    function guardarDatos(){
+        //Llamar al objeto LocalStorage y asignar valores
+        nombre = document.getElementById("nombre").value;
+        apellido = document.getElementById("apellido").value;
+        if((nombre == "") && (apellido == "")){
+            alert("Debes ingresar datos");
+        }else{
+            localStorage.nombre = nombre;
+            localStorage.apellido = apellido;
+        }
+    }
+    function recuperarDatos(){
+        let p = document.getElementById("datos");
+        if((localStorage.nombre != undefined) && (localStorage.apellido != undefined)){
+            p.innerText = "Nombre: " + localStorage.nombre + ", Apellido: " + localStorage.apellido;
+        }else{
+            p.innerText = "No hay datos guardados";
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function determinar(){
+            var numero = document.getElementById("numero").value;
+            var leyenda = document.getElementById("leyenda");
+            let resultado;
+            if(numero > 0){
+                resultado = "Es un numero positivo";
+            }
+            else if(numero == 0){
+                resultado = "Es cero";
+            }
+            else{
+                resultado = "Es un numero negativo";
+            }
+            leyenda.innerHTML = resultado;
+        }
+        
+
+
+    </script>
+</head>
+<body>
+    <form action="" id="form">
+        <div id="div-num">
+            <label for="numero">Ingrese un numero</label>
+            <input type="number" name="numero" id="numero">
+        </div>
+        <button type="button" onclick="determinar()">Determinar</button>
+    </form>
+    <h1>
+        <div id="leyenda"></div>
+    </h1>
+</body>
+</html>

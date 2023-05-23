@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Datos del alumno:</h2>
+    <form action="" id="form">
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre">
+        </div>
+        <div>
+            <label for="apellido">Apellido:</label>
+            <input type="text" name="apellido" id="apellido">
+        </div>
+        <div>
+            <label for="domicilio">Domicilio:</label>
+            <input type="text" name="domicilio" id="domicilio">
+        </div>
+        <div>
+            <label for="curso">Curso:</label>
+            <input type="text" name="curso" id="curso">
+        </div>
+        <div>
+            <label for="carrera">Carrera:</label>
+            <input type="text" name="carrera" id="carrera">
+        </div>
+        <div>
+            <label for="materia">Materia:</label>
+            <input type="text" name="materia" id="materia">
+        </div>
+        <div>
+            <label for="nota">Nota primer parcial:</label>
+            <input type="number" name="nota" id="nota">
+        </div>
+        <button type="button" onclick="mostrar();">Enviar</button>
+    </form>
+    
+    <div>
+        <ul id="resultado"></ul>
+    </div>
+    
+</body>
+<script>
+    function mostrar(){
+        let nombre = document.getElementById('nombre').value;
+        let apellido = document.getElementById('apellido').value;
+        let domicilio = document.getElementById('domicilio').value;
+        let curso = document.getElementById('curso').value;
+        let carrera = document.getElementById('carrera').value;
+        let materia = document.getElementById('materia').value;
+        let nota = document.getElementById('nota').value;
+        let resultado = document.getElementById('resultado');
+        let calificacion;
+        if(nota < 4){
+            calificacion = "Desaprobado";
+        }
+        else if(nota >=4 && nota <= 5){
+            calificacion = "Regular";
+        }
+        else if(nota >= 6 && nota <= 10){
+            calificacion = "Promoción";
+        }
+        else{
+            calificacion = "Nota invalida";
+        }
+
+        datos.textContent = nombre;
+        datos = document.createElement("li");
+        resultado.appendChild(datos);
+        datos.textContent = apellido;
+        datos = document.createElement("li");
+        resultado.appendChild(datos);
+        datos.textContent = domicilio;
+        datos = document.createElement("li");
+        resultado.appendChild(datos);
+        datos.textContent = curso;
+        datos = document.createElement("li");
+        resultado.appendChild(datos);
+        datos.textContent = carrera;
+        datos = document.createElement("li");
+        resultado.appendChild(datos);
+        datos.textContent = materia;
+        datos = document.createElement("li");
+        resultado.appendChild(datos);
+        datos.textContent = nota;
+        datos = document.createElement("li");
+        resultado.appendChild(datos);
+        datos.textContent = calificacion;
+        datos = document.createElement("li");
+        resultado.appendChild(datos);
+        
+    }
+</script>
+</html>

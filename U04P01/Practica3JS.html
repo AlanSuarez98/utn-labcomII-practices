@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function test(){
+
+            let nombre = document.getElementById("nombre").value;
+            let preguntas = document.getElementById("preguntas").value;
+            let respuestas = document.getElementById("respuestas").value;
+            let resultado = document.getElementById("resultado");
+    
+            let txtResultado = "El postulante " + nombre + " obtuvo el nivel: ";
+    
+            let calcularPorcentaje = Math.floor(respuestas * 100) / preguntas;
+            let porcentaje;
+            if(calcularPorcentaje >= 90){
+                porcentaje = "Superior " + calcularPorcentaje + "%";
+            }
+            else if(calcularPorcentaje >= 75 && calcularPorcentaje < 90){
+                porcentaje = "Medio " + calcularPorcentaje + "%";
+            }
+            else if(calcularPorcentaje >= 50 && calcularPorcentaje < 75){
+                porcentaje = "Regular " + calcularPorcentaje + "%";
+            }
+            else{
+                porcentaje = "Fuera de nivel " + calcularPorcentaje + "%";
+            }
+            nivelFinal = txtResultado + porcentaje;
+            resultado.innerHTML = nivelFinal;
+        }
+
+        
+
+        
+    </script>
+</head>
+<body>
+    <form action="" id="form">
+        <div>
+            <label for="nombre">Nombre Postulante</label>
+            <input type="text" name="nombre" id="nombre">
+            <label for="preguntas">Cantidad de preguntas totales realizadas</label>
+            <input type="number" name="preguntas" id="preguntas">
+            <label for="respuestas">Cantidad de preguntas contestadas</label>
+            <input type="number" name="respuestas" id="respuestas">
+        </div>
+        <button type="button" onclick="test()">Realizar test</button>
+    </form>
+    <h1>
+        <div id="resultado"></div>
+    </h1>
+</body>
+</html>

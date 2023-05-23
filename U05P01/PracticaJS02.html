@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="onloadPage();">
+    <form action="" id="form">
+        <input type="button" onclick="contadorClicks();" value="Hacer click aquí">
+        <input type="text" onload="contadorClicks();" id="contador">
+        <input type="button" onclick="resetearClicks();" value="Resetear contador">
+    </form>
+</body>
+<script>
+    function contadorClicks(){
+        if(localStorage.contador){
+            localStorage.contador = parseInt(localStorage.contador) + 1;
+
+        }else{
+            localStorage.contador = 1;
+        }
+        document.getElementById("contador").value = localStorage.contador + " clicks";
+    }
+    function resetearClicks(){
+        contador = document.getElementById("contador");
+        //localStorage.removeItem("contador")
+        localStorage.contador = 0;
+        if((contador != "") && (contador != 0)){
+            contador.value = "0";
+        }
+    }
+    function onloadPage(){
+        document.getElementById("contador").value = localStorage.contador;
+    }
+</script>
+</html>
